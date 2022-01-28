@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node src/",
     "dev": "nodemon src/",
-    "live": "live-server public/"
+    "live": "live-server public/",
+    "build:css": "npx tailwindcss -i ./src/index.css -o ./public/realtime-chat/style.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -18,12 +19,13 @@
   },
   "devDependencies": {
     "@pattern-lab/live-server": "5.15.5",
-    "eslint": "7.32.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.2.0",
     "nodemon": "2.0.15",
+    "standard": "16.0.4",
     "tailwindcss": "3.0.16"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ]
   }
 }
