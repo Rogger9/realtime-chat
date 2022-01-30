@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatApp</title>
+  <link rel="stylesheet" href="realtime-chat/style.css">
+  <meta name="author" content="Rogelio Gutierrez">
+  <meta name="description" content="Realtime chat project built on NodeJS, JavaScript and Tailwind.">
+  <meta name="keywords" content="nodejs, developer, javascript, chat">
+</head>
+
+<body class="box-border text-center">
+  <div class="grid place-items-center h-screen bg-gray-50">
+    <section class="w-3/4 h-3/5 bg-indigo-400 rounded grid grid-rows-6 shadow-lg shadow-black/50">
+      <header class="flex justify-between items-center bg-indigo-500 px-8 rounded-t shadow shadow-indigo-500">
+        <img src="realtime-chat/assets/chat.svg" alt="chat image" width="48" height="48" class="object-contain">
+        <button
+          class="bg-indigo-600 text-gray-100 py-1 px-6 rounded-3xl hover:bg-indigo-700 shadow shadow-black/60 active:scale-95 outline-none"
+          aria-label="Leave Room">Leave Room</button>
+      </header>
+      <main class="grid row-span-4 grid-cols-3 gap-2">
+        <section class="bg-indigo-500 shadow shadow-indigo-500">
+
+        </section>
+        <section class="col-span-2">
+
+        </section>
+      </main>
+      <form class="bg-indigo-500 flex items-center justify-center w-full rounded-b gap-2 px-2 shadow shadow-indigo-500">
+        <input type="text" class="w-3/4 h-8 px-4 rounded-sm border-none outline-none focus:shadow-sm focus:shadow-white"
+          placeholder="Message..." required>
+        <button
+          class="bg-indigo-600 h-8 px-4 rounded-sm text-white hover:bg-indigo-700 shadow shadow-black/60 active:scale-95 outline-none"
+          aria-label="Send">Send</button>
+      </form>
+    </section>
+  </div>
+</body>
+
+</html>
