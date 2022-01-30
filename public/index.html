@@ -11,24 +11,25 @@
   <meta name="keywords" content="nodejs, developer, javascript, chat">
 </head>
 
-<body class="box-border text-center relative">
+<body class="box-border text-center">
   <div class="grid place-items-center h-screen bg-gray-50">
-    <section class="w-3/4 h-3/5 bg-indigo-400 rounded grid grid-rows-6">
+    <section class="w-3/4 h-3/5 bg-indigo-400 rounded grid grid-rows-6 shadow-lg shadow-black/50">
       <header class="flex justify-between items-center bg-indigo-500 px-8 rounded-t shadow shadow-indigo-500">
         <img src="realtime-chat/assets/chat.svg" alt="chat image" width="48" height="48" class="object-contain">
         <h1 class="text-2xl"><b>Chat live</b></h1>
         <span id="date"></span>
       </header>
-      <main class="row-span-5 grid place-items-center p-8">
+      <form class="grid row-span-5 place-items-center p-8">
         <label for="name" class="flex flex-col items-start w-1/2 gap-2">
           Username
-          <input type="text"
+          <input type="text" name="username"
             class="w-full h-8 px-4 rounded-sm border-none outline-none focus:shadow-sm focus:shadow-white"
             placeholder="Enter your username..." required>
         </label>
         <label for="rooms" class="flex flex-col w-40 gap-2">
           Rooms
-          <select name="rooms" id="rooms" class="bg-gray-100 text-center p-1 rounded-sm outline-none w-full">
+          <select name="rooms" id="rooms"
+            class="bg-gray-100 text-center p-1 rounded-sm outline-none w-full cursor-pointer">
             <option value="US">US</option>
             <option value="Spanish">Spanish</option>
             <option value="College">College</option>
@@ -37,9 +38,9 @@
           </select>
         </label>
         <button
-          class="bg-indigo-600 text-gray-100 py-1 px-6 rounded-3xl hover:bg-indigo-700 shadow shadow-black/60 active:scale-95"
+          class="bg-indigo-600 text-gray-100 py-1 px-6 rounded-3xl hover:bg-indigo-700 shadow shadow-black/60 active:scale-95 outline-none"
           aria-label="join chat">Join chat</button>
-      </main>
+      </form>
     </section>
   </div>
 </body>
