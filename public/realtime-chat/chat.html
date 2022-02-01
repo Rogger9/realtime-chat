@@ -33,7 +33,7 @@
             </ul>
           </div>
         </section>
-        <section class="col-span-2 p-2">
+        <section class="col-span-2 p-2" id="messageContainer">
           <div class="bg-sky-200 grid gap-1 p-2 rounded-lg" id="message">
             <header class="flex gap-2 text-sm">
               <span class="text-sky-800 font-bold">Name</span>
@@ -53,6 +53,17 @@
       </form>
     </section>
   </div>
+
+  <template id="templateMessage">
+    <div class="bg-sky-200 grid gap-1 p-2 rounded-lg" id="message">
+      <header class="flex gap-2 text-sm">
+        <span class="text-sky-800 font-bold">Name</span>
+        -
+        <span class="text-gray-600">Hora</span>
+      </header>
+      <p class="w-full text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sit amet.</p>
+    </div>
+  </template>
 </body>
 
 </html>
