@@ -1,7 +1,7 @@
-const app = require('./server')
-const port = app.get('port')
+const server = require('./server')
+const PORT = process.env.PORT ?? 4000
 
 ;(async () => {
-  await app.listen(port)
-  console.log('serve on PORT', port)
+  await server.listen(PORT)
+  console.log('serve on PORT', PORT)
 })()
