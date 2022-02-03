@@ -468,16 +468,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-.col-span-2 {
-  grid-column: span 2 / span 2;
-}
-
 .col-span-3 {
   grid-column: span 3 / span 3;
-}
-
-.row-span-5 {
-  grid-row: span 5 / span 5;
 }
 
 .row-span-4 {
@@ -488,14 +480,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-row: span 2 / span 2;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.mx-12 {
-  margin-left: 3rem;
-  margin-right: 3rem;
+.row-span-5 {
+  grid-row: span 5 / span 5;
 }
 
 .box-border {
@@ -514,56 +500,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100vh;
 }
 
-.h-3\/5 {
-  height: 60%;
+.h-5\/6 {
+  height: 83.333333%;
 }
 
 .h-8 {
   height: 2rem;
 }
 
-.h-auto {
-  height: auto;
-}
-
-.h-5\/6 {
-  height: 83.333333%;
-}
-
-.w-3\/4 {
-  width: 75%;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.w-40 {
-  width: 10rem;
+.h-3\/5 {
+  height: 60%;
 }
 
 .w-5\/6 {
   width: 83.333333%;
 }
 
+.w-full {
+  width: 100%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
 .w-8 {
   width: 2rem;
 }
 
+.w-40 {
+  width: 10rem;
+}
+
 .cursor-pointer {
   cursor: pointer;
-}
-
-.grid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .grid-cols-1 {
@@ -578,16 +548,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-rows: repeat(6, minmax(0, 1fr));
 }
 
-.grid-rows-2 {
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .grid-rows-1 {
   grid-template-rows: repeat(1, minmax(0, 1fr));
-}
-
-.grid-rows-3 {
-  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -626,12 +592,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: auto;
 }
 
-.rounded {
-  border-radius: 0.25rem;
+.overflow-y-auto {
+  overflow-y: auto;
 }
 
-.rounded-sm {
-  border-radius: 0.125rem;
+.rounded {
+  border-radius: 0.25rem;
 }
 
 .rounded-3xl {
@@ -640,6 +606,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-sm {
+  border-radius: 0.125rem;
 }
 
 .rounded-t {
@@ -671,11 +641,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(99 102 241 / var(--tw-bg-opacity));
 }
 
-.bg-gray-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .bg-indigo-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
@@ -686,17 +651,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(186 230 253 / var(--tw-bg-opacity));
 }
 
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.p-8 {
-  padding: 2rem;
-}
-
-.p-1 {
-  padding: 0.25rem;
 }
 
 .p-2 {
@@ -707,14 +669,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding: 1rem;
 }
 
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+.p-1 {
+  padding: 0.25rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .py-1 {
@@ -737,9 +698,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.5rem;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .text-left {
@@ -748,11 +709,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-center {
   text-align: center;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-sm {
@@ -821,21 +777,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
-.placeholder\:text-xs::-moz-placeholder {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.placeholder\:text-xs:-ms-input-placeholder {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.placeholder\:text-xs::placeholder {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .hover\:bg-indigo-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(67 56 202 / var(--tw-bg-opacity));
@@ -885,10 +826,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .lg\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .lg\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -899,10 +836,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:grid-rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
-  }
-
-  .lg\:justify-between {
-    justify-content: space-between;
   }
 
   .lg\:p-8 {

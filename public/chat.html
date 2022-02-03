@@ -13,9 +13,10 @@
 
 <body class="box-border text-center">
   <div class="grid place-items-center h-screen bg-gray-50">
-    <section class="w-5/6 sm:w-3/4 h-5/6 sm:h-3/5 bg-indigo-400 rounded grid grid-rows-6 shadow-lg shadow-black/50">
+    <section class="w-5/6 sm:w-3/4 h-5/6 bg-indigo-400 rounded grid grid-rows-6 shadow-lg shadow-black/50">
       <header class="flex justify-between items-center bg-indigo-500 px-3 lg:px-8 rounded-t shadow shadow-indigo-500">
-        <img src="realtime-chat/assets/chat.svg" alt="chat image" width="48" height="48" class="object-contain">
+        <img src="realtime-chat/assets/chat.svg" alt="chat image" width="48" height="48"
+          class="object-contain w-8 h-8 lg:w-auto lg:h-auto">
         <button
           class="bg-indigo-600 text-gray-100 py-1 px-6 rounded-3xl text-sm lg:text-base hover:bg-indigo-700 shadow shadow-black/60 active:scale-95 outline-none"
           aria-label="Leave Room">Leave Room</button>
@@ -34,7 +35,7 @@
             </ul>
           </div>
         </section>
-        <section class="row-span-2 col-span-3 p-4 overflow-auto" id="messageContainer">
+        <section class="row-span-2 col-span-3 p-4 overflow-y-auto" id="messageContainer">
           <div class="bg-sky-200 grid gap-1 p-2 rounded-lg" id="message">
             <header class="flex gap-2 text-sm">
               <span class="text-sky-800 font-bold">Name</span>
