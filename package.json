@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server",
-    "dev": "nodemon src/server",
+    "start": "node src/",
+    "dev": "nodemon src/",
     "live": "live-server public/",
     "build:css": "npx tailwindcss -i ./src/index.css -o ./public/realtime-chat/style.css --watch"
   },
