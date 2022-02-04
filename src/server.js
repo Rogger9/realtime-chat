@@ -13,9 +13,10 @@ const io = socketio(server)
 
 io.on('connection', socket => console.log('New WS connection...'))
 
-const PORT = process.env.PORT ?? 4000
-;(async () => {
-  await server.listen(PORT)
-  console.log('serve on PORT', PORT)
-})()
-// module.exports = server
+// const PORT = process.env.PORT ?? 4000
+// ;(async () => {
+//   await server.listen(PORT)
+//   console.log('serve on PORT', PORT)
+// })()
+
+module.exports = server

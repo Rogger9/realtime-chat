@@ -1,3 +1,2 @@
-console.log('main')
-// const io = require('../../socket.io/socket.io.js')
+// eslint-disable-next-line no-undef
 const socket = io()
