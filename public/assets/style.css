@@ -484,6 +484,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-row: span 5 / span 5;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -516,16 +521,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 83.333333%;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-3\/4 {
   width: 75%;
-}
-
-.w-8 {
-  width: 2rem;
 }
 
 .w-40 {
@@ -588,8 +593,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.25rem;
 }
 
-.overflow-auto {
-  overflow: auto;
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .overflow-y-auto {
@@ -604,12 +609,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 1.5rem;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
 .rounded-sm {
   border-radius: 0.125rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .rounded-t {
@@ -730,6 +735,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .text-sky-800 {
   --tw-text-opacity: 1;
   color: rgb(7 89 133 / var(--tw-text-opacity));
@@ -738,11 +748,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-600 {
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -800,10 +805,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
-  .sm\:h-3\/5 {
-    height: 60%;
-  }
-
   .sm\:w-3\/4 {
     width: 75%;
   }
