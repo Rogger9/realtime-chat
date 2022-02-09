@@ -5,15 +5,17 @@ const templateMessage = document.getElementById('templateMessage').content
 const fragment = document.createDocumentFragment()
 const $messageContainer = document.getElementById('messageContainer')
 
-function addMessage (msg) {
+function createMessage (name, msg, time) {
+  templateMessage.querySelector('#nameMessage').textContent = name
+  templateMessage.querySelector('#timeMessage').textContent = time
   templateMessage.querySelector('#textMessage').textContent = msg
   const clone = templateMessage.cloneNode(true)
   fragment.appendChild(clone)
   return $messageContainer.appendChild(fragment)
 }
 
-socket.on('message', message => {
-  addMessage(message)
+socket.on('message', ({ name, text, time }) => {
+  createMessage(name, text, time)
   $messageContainer.scrollTop = $messageContainer.scrollHeight
 })
 
