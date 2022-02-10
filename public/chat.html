@@ -20,22 +20,21 @@
       <header class="flex justify-between items-center bg-indigo-500 px-3 lg:px-8 rounded-t shadow shadow-indigo-500">
         <img src="assets/chat.svg" alt="chat image" width="48" height="48"
           class="object-contain w-8 h-8 lg:w-auto lg:h-auto">
-        <button
-          class="bg-indigo-600 text-gray-100 py-1 px-6 rounded-3xl text-sm lg:text-base hover:bg-indigo-700 shadow shadow-black/60 active:scale-95 outline-none"
-          aria-label="Leave Room">Leave Room</button>
+        <a href="index.html"
+          class="bg-indigo-600 text-gray-100 py-1 px-6 rounded-3xl text-sm lg:text-base hover:bg-indigo-700 shadow shadow-black/60 active:scale-95 outline-none">
+          LeaveRoom
+        </a>
       </header>
       <main class="grid row-span-4 grid-rows-3 grid-cols-1 lg:grid-cols-4 lg:grid-rows-1 text-sm lg:text-base">
         <section
           class="bg-indigo-500 grid place-items-center grid-cols-2 grid-rows-1 p-2 shadow shadow-indigo-500 lg:grid-cols-1 lg:grid-rows-2">
           <div class="grid gap-2">
-            <h2>Room name:</h2>
-            <span class="" id="roomName">NAME</span>
+            <h2><b>Room name:</b></h2>
+            <span id="roomName"></span>
           </div>
           <div class="grid gap-2">
-            <h2>Users</h2>
-            <ul class="bg-gray-50 px-6 py-2 rounded" id="listUsers">
-              <li>John</li>
-            </ul>
+            <h2><b>Users</b></h2>
+            <ul class="bg-gray-50 px-6 py-2 rounded" id="listUsers"></ul>
           </div>
         </section>
         <section class="row-span-2 col-span-3 p-4 overflow-y-auto" id="messageContainer"></section>
