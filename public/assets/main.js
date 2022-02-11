@@ -45,7 +45,10 @@ function addRoomName (name) {
 }
 
 function showListUsers (users) {
-  $listUsers.innerHTML = `
-    ${users.map(({ username }) => `<li>${username}</li>`).join('')}
-  `
+  $listUsers.innerHTML = ''
+  users.map(({ username }) => {
+    const li = document.createElement('li')
+    li.textContent = username
+    return $listUsers.appendChild(li)
+  })
 }
