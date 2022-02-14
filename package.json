@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/",
     "dev": "nodemon src/",
-    "live": "live-server public/",
+    "live": "servor ./public/ index.html 3000 --reload",
     "build:css": "npx tailwindcss -i ./src/index.css -o ./public/realtime-chat/style.css --watch"
   },
   "keywords": [],
@@ -17,7 +17,6 @@
     "socket.io": "4.4.1"
   },
   "devDependencies": {
-    "@pattern-lab/live-server": "5.15.5",
     "nodemon": "2.0.15",
     "standard": "16.0.4",
     "tailwindcss": "3.0.16"
