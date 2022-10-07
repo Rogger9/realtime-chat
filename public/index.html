@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatApp</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <meta name="author" content="Rogelio Gutierrez" />
+    <meta
+      name="description"
+      content="Realtime chat project built on NodeJS, JavaScript and Tailwind."
+    />
+    <meta name="keywords" content="nodejs, developer, javascript, chat" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChatApp</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <meta name="author" content="Rogelio Gutierrez">
-  <meta name="description" content="Realtime chat project built on NodeJS, JavaScript and Tailwind.">
-  <meta name="keywords" content="nodejs, developer, javascript, chat">
-</head>
-
-<body class="box-border text-center">
-  <div class="grid place-items-center h-screen bg-gray-50">
-    <section
-      class="w-5/6 sm:w-3/4 h-3/5 bg-indigo-400 rounded grid grid-rows-6 shadow-lg shadow-black/50 text-sm lg:text-base">
-      <header class="flex justify-between items-center bg-indigo-500 px-3 lg:px-8 rounded-t shadow shadow-indigo-500">
-        <img src="assets/chat.svg" alt="chat image" width="48" height="48"
-          class="object-contain w-8 h-8 lg:w-auto lg:h-auto">
-        <h1 class="text-base lg:text-2xl"><b>Chat live</b></h1>
-        <span id="date"></span>
-      </header>
-      <form action="chat.html" class="grid row-span-5 place-items-center p-2 lg:p-8">
-        <label for="name" class="flex flex-col items-start w-40 lg:w-1/2 gap-2">
-          Username
-          <input type="text" name="username"
-            class="w-full h-8 px-4 rounded-sm border-none outline-none focus:shadow-sm focus:shadow-white"
-            placeholder="Username..." required>
-        </label>
-        <label for="rooms" class="flex flex-col w-40 gap-2">
-          Rooms
-          <select name="rooms" id="rooms"
-            class="bg-gray-100 text-center p-1 rounded-sm outline-none w-full cursor-pointer">
-            <option value="US">US</option>
-            <option value="Spanish">Spanish</option>
-            <option value="College">College</option>
-            <option value="Music">Music</option>
-            <option value="Sports">Sports</option>
-          </select>
-        </label>
-        <button
-          class="bg-indigo-600 text-gray-100 py-1 px-6 rounded-3xl hover:bg-indigo-700 shadow shadow-black/60 active:scale-95 outline-none"
-          aria-label="join chat">Join chat</button>
-      </form>
-    </section>
-  </div>
-</body>
-
+  <body class="box-border text-center">
+    <div class="grid place-items-center h-screen bg-gray-50">
+      <section
+        class="w-5/6 sm:w-3/4 h-3/5 bg-indigo-400 rounded grid grid-rows-6 shadow-lg shadow-black/50 text-sm lg:text-base"
+      >
+        <header
+          class="flex justify-between items-center bg-indigo-500 px-3 lg:px-8 rounded-t shadow shadow-indigo-500"
+        >
+          <img
+            src="assets/chat.svg"
+            alt="chat image"
+            width="48"
+            height="48"
+            class="object-contain w-8 h-8 lg:w-auto lg:h-auto"
+          />
+          <h1 class="text-base lg:text-2xl"><b>Chat live</b></h1>
+          <span id="date"></span>
+        </header>
+        <form action="chat.html" class="grid row-span-5 place-items-center p-2 lg:p-8">
+          <label for="name" class="flex flex-col items-start w-40 lg:w-1/2 gap-2">
+            Username
+            <input
+              type="text"
+              name="username"
+              class="w-full h-8 px-4 rounded-sm border-none outline-none focus:shadow-sm focus:shadow-white"
+              placeholder="Username..."
+              required
+            />
+          </label>
+          <label for="rooms" class="flex flex-col w-40 gap-2">
+            Rooms
+            <select
+              name="rooms"
+              id="rooms"
+              class="bg-gray-100 text-center p-1 rounded-sm outline-none w-full cursor-pointer"
+            >
+              <option value="US">US</option>
+              <option value="Spanish">Spanish</option>
+              <option value="College">College</option>
+              <option value="Music">Music</option>
+              <option value="Sports">Sports</option>
+            </select>
+          </label>
+          <button
+            class="bg-indigo-600 text-gray-100 py-1 px-6 rounded-3xl hover:bg-indigo-700 shadow shadow-black/60 active:scale-95 outline-none"
+            aria-label="join chat"
+          >
+            Join chat
+          </button>
+        </form>
+      </section>
+    </div>
+  </body>
 </html>

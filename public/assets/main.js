@@ -7,9 +7,9 @@ const $messageContainer = document.getElementById('messageContainer')
 const $roomName = document.getElementById('roomName')
 const $listUsers = document.getElementById('listUsers')
 
-const loginData = window.location.search
-const username = loginData.match(/username=\w+/)[0].replace(/username=/, '')
-const room = loginData.match(/rooms=\w+/)[0].replace(/rooms=/, '')
+const { search } = window.location
+const username = search.match(/username=\w+/)[0].replace(/username=/, '')
+const room = search.match(/rooms=\w+/)[0].replace(/rooms=/, '')
 
 socket.emit('joinRoom', { username, room })
 
@@ -23,7 +23,7 @@ socket.on('message', ({ name, text, time }) => {
   $messageContainer.scrollTop = $messageContainer.scrollHeight
 })
 
-$formChat.addEventListener('submit', (e) => {
+$formChat.addEventListener('submit', e => {
   e.preventDefault()
   const msg = e.target.messageChat.value
   socket.emit('chatMessage', msg)
@@ -31,7 +31,7 @@ $formChat.addEventListener('submit', (e) => {
   e.target.messageChat.focus()
 })
 
-function createMessage (name, msg, time) {
+function createMessage(name, msg, time) {
   templateMessage.querySelector('#nameMessage').textContent = name
   templateMessage.querySelector('#timeMessage').textContent = time
   templateMessage.querySelector('#textMessage').textContent = msg
@@ -40,11 +40,11 @@ function createMessage (name, msg, time) {
   return $messageContainer.appendChild(fragment)
 }
 
-function addRoomName (name) {
+function addRoomName(name) {
   $roomName.textContent = name.toUpperCase()
 }
 
-function showListUsers (users) {
+function showListUsers(users) {
   $listUsers.innerHTML = ''
   users.map(({ username }) => {
     const li = document.createElement('li')

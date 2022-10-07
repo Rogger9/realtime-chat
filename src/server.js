@@ -3,7 +3,7 @@ const path = require('path')
 const { createServer } = require('http')
 const { Server: WedSocketServer } = require('socket.io')
 const formatMessage = require('./utils/message')
-const { userJoin, getCurrentUser, userLeave, getRoomUser } = require('./utils/users')
+const { userJoin, getCurrentUser, getRoomUser, userLeave } = require('./utils/users')
 
 const app = express()
 app.use(express.static(path.join(__dirname, '../', 'public')))
@@ -18,10 +18,12 @@ io.on('connection', socket => {
     socket.join(user.room)
 
     socket.emit('message', formatMessage(nameBot, 'Welcome to Chat!'))
-    socket.broadcast.to(user.room).emit('message', formatMessage(nameBot, `${user.username} has joined the chat!`))
+    socket.broadcast
+      .to(user.room)
+      .emit('message', formatMessage(nameBot, `${user.username} has joined the chat!`))
     io.to(user.room).emit('roomUsers', {
       room: user.room,
-      users: getRoomUser(user.room)
+      users: getRoomUser(user.room),
     })
   })
 
@@ -31,11 +33,12 @@ io.on('connection', socket => {
   })
 
   socket.on('disconnect', () => {
-    const { username, room } = userLeave(socket.id)
-    io.to(room).emit('message', formatMessage(nameBot, `${username} has left the chat!`))
-    io.to(room).emit('roomUsers', {
-      room,
-      users: getRoomUser(room)
+    const user = userLeave(socket.id)
+    if (!user) return
+    io.to(user.room).emit('message', formatMessage(nameBot, `${user.username} has left the chat!`))
+    io.to(user.room).emit('roomUsers', {
+      room: user.room,
+      users: getRoomUser(user.room),
     })
   })
 })

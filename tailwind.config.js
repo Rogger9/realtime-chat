@@ -1,8 +1,7 @@
 module.exports = {
-  // eslint-disable-next-line
-  content: ["./public/**/*.{html,js}"],
+  content: ['./public/**/*.{html,js}'],
   theme: {
-    extend: {}
+    extend: {},
   },
-  plugins: []
+  plugins: [],
 }

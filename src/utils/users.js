@@ -6,13 +6,13 @@ const userJoin = (id, username, room) => {
   return user
 }
 
-const getCurrentUser = (id) => users.find(user => user.id === id)
+const getCurrentUser = id => users.find(user => user.id === id)
 
-const userLeave = (id) => {
+const userLeave = id => {
   const index = users.findIndex(user => user.id === id)
   if (index !== -1) return users.splice(index, 1)[0]
 }
 
-const getRoomUser = (room) => users.filter(user => user.room === room)
+const getRoomUser = room => users.filter(user => user.room === room)
 
 module.exports = { userJoin, getCurrentUser, userLeave, getRoomUser }
